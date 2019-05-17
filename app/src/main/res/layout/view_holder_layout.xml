@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+            android:text="Valor no Brasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtVlrNoBrasil"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:fontFamily="sans-serif"
+            android:layout_marginStart="36dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtProduto"/>
+    <TextView
+            android:text="Valor Brasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtValorReal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="22sp"
+            app:layout_constraintStart_toEndOf="@+id/txtVlrNoBrasil"
+            android:layout_marginStart="56dp" android:layout_marginTop="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtProduto"/>
+    <TextView
+            android:text="Valor nos Eua"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:id="@+id/txtValorNosEua"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtVlrNoBrasil"
+            android:layout_marginStart="36dp" app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="Valor Eua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtValorEua"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toEndOf="@+id/txtValorNosEua"
+            android:layout_marginStart="68dp" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtValorReal"/>
+    <TextView
+            android:text="Valor Convertido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtValorConvertido"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtValorNosEua"
+            android:layout_marginStart="36dp" app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="Valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtVlrConvertidoInput"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtValorEua"
+            app:layout_constraintStart_toEndOf="@+id/txtValorConvertido" android:layout_marginStart="36dp"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_delete"
+            android:id="@+id/imageButton" android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtVlrConvertidoInput" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.509"
+            style="@style/Widget.AppCompat.ImageButton" android:background="#fff"/>
+    <TextView
+            android:text="Nome Produto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtProduto"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
