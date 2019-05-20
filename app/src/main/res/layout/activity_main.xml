@@ -12,6 +12,8 @@
             android:clickable="true"
             app:srcCompat="@android:drawable/ic_input_add"
             android:id="@+id/addProduto"
+            android:onClick="addProduto"
+
             app:backgroundTint="@color/design_default_color_primary_dark" android:focusable="true"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="20dp"
@@ -20,6 +22,9 @@
             android:layout_width="395dp"
             android:layout_height="635dp"
             android:id="@+id/recyclerItem"
+
+
+
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="21dp"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"

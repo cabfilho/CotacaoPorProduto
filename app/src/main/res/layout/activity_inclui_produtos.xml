@@ -18,7 +18,8 @@
         <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Produto"/>
+
+                android:hint="Produto" android:id="@+id/inputProduto"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
@@ -33,7 +34,8 @@
         <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Valor nos EUA"/>
+                android:inputType="number"
+                android:hint="Valor nos EUA" android:id="@+id/inputVlrEua"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
@@ -45,7 +47,8 @@
         <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Valor do Brasil"/>
+                android:inputType="number"
+                android:hint="Valor do Brasil" android:id="@+id/inputVlrBrasil"/>
     </com.google.android.material.textfield.TextInputLayout>
     <Button
             android:text="Salvar Dados"
@@ -57,7 +60,7 @@
             app:layout_constraintHorizontal_bias="0.455"
             android:layout_marginBottom="72dp"
             app:layout_constraintBottom_toBottomOf="parent"
-
+            android:onClick="savePublicacao"
             android:textAllCaps="false"
             style="@android:style/Widget.Material.Light.Button.Toggle"
             android:background="@color/design_default_color_primary" android:textColor="#fff"/>
