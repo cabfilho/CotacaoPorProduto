@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                   android:layout_height="210dp"
+                                   app:cardCornerRadius="15dp"
+                                   app:cardBackgroundColor="#324078">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:text="Real:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtVlrNoBrasil"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" android:fontFamily="sans-serif"
+                android:layout_marginStart="16dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtProduto"/>
+        <TextView
+                android:text="Real"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtValorReal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@+id/txtVlrNoBrasil"
+                android:layout_marginStart="16dp" android:layout_marginTop="8dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/txtProduto"/>
+        <TextView
+                android:text="Dolar:"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:id="@+id/txtValorNosEua"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_marginStart="16dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtVlrNoBrasil"/>
+        <TextView
+                android:text="Valor Eua"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:id="@+id/txtValorEua"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/txtValorNosEua" android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtValorReal"/>
+        <TextView
+                android:text="Converção:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtValorConvertido"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="4dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/txtValorNosEua"/>
+        <TextView
+                android:text="Valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtVlrConvertidoInput"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/txtValorConvertido"
+                android:layout_marginStart="12dp" android:layout_marginTop="8dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/txtValorEua"/>
+        <TextView
+                android:text="Nome Produto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProduto"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+
+                android:textColor="@android:color/white"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="4dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="Diferença:"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content"
+                android:id="@+id/textDif"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintTop_toBottomOf="@+id/txtValorConvertido" android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"/>
+        <TextView
+                android:text="Diferença"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDiferenca"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtVlrConvertidoInput"
+                app:layout_constraintStart_toEndOf="@+id/textDif" android:layout_marginStart="4dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

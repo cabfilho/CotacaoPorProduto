@@ -2,6 +2,7 @@ package com.example.cotacaoporproduto
 
 import android.app.Activity
 import android.content.Intent
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,6 +10,8 @@ import android.widget.EditText
 import android.widget.RatingBar
 import android.widget.Spinner
 import com.example.cotacaoporproduto.modelo.Produto
+import kotlinx.android.synthetic.main.activity_inclui_produtos.*
+import java.util.*
 
 class IncluiProduto : AppCompatActivity() {
     private var nomeProduto: EditText? = null
@@ -24,12 +27,12 @@ class IncluiProduto : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inclui_produtos)
         val extras = intent.extras
-        id = ""
-        nomeProduto = findViewById(R.id.inputProduto)
-        valorEua = findViewById(R.id.inputVlrEua)
-        valorBr = findViewById(R.id.inputVlrBrasil)
-        repository = ProdutoRepository(this)
 
+        id = ""
+        nomeProduto = inputProduto
+        valorEua = inputVlrEua
+        valorBr = inputVlrBrasil
+        repository = ProdutoRepository(this)
         if (extras != null) {
 
             id = extras.get("id").toString()
@@ -37,7 +40,9 @@ class IncluiProduto : AppCompatActivity() {
 
         if (id.isNotBlank()) {
 
+            lblTitulo.text = "Altere Seu Produto"
             produto = repository.getProduto(id.toInt())
+            btnDeletar.visibility = View.VISIBLE
             if(produto!= null) {
                 nomeProduto!!.setText(produto!!.nomeProduto)
                 valorEua!!.setText(produto!!.valorEua.toString())
@@ -45,14 +50,21 @@ class IncluiProduto : AppCompatActivity() {
 
 
             }
-
-
+        }else{
+            actionBar?.title = "Cadastre Seu Produto"
+            btnDeletar.visibility = View.INVISIBLE
         }
 
 
 
     }
-
+    fun deletePublicacao(view: View){
+        val produto = Produto(nomeProduto!!.text.toString(),valorBr!!.text.toString().toDouble(),valorEua!!.text.toString().toDouble())
+        produto.id = id.toInt()
+        repository.deleteProduto(produto)
+        setResult(Activity.RESULT_OK, resultIntent)
+        finish()
+    }
     fun savePublicacao(view: View) {
 
         var bTemErro: Boolean = false
